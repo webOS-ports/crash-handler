@@ -1,0 +1,7 @@
+# -*- mode: shell-script; -*-
+
+start on stopped finish
+
+console output
+
+exec /usr/sbin/crash_handler --install
