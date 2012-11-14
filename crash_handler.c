@@ -68,7 +68,7 @@
 #define CRASH_JOURNAL_FILENAME	"/tmp/crash_journal"
 
 /* set to 1 to save a full core file for each crash report */
-#define DO_CORE_FILE 	0
+#define DO_CORE_FILE 	1
 
 /* select which unwinder(s) to use for backtrace */
 #define USE_TABLE_UNWINDER	1
