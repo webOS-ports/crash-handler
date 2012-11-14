@@ -3,6 +3,7 @@ VERSION=0
 REVISION=6
 
 PROG = crash_handler
+CC = $(CROSS_COMPILE)gcc
 
 OBJECTS = crash_handler.o \
 	utility.o \
@@ -12,10 +13,10 @@ OBJECTS = crash_handler.o \
 	guess-unwinder.o
 
 $(PROG): $(OBJECTS)
-	$(CROSS_COMPILE)gcc $^ -o $@
+	$(CC) $^ -o $@
 
 %.o: %.c
-	$(CROSS_COMPILE)gcc -c $< -o $@
+	$(CC) -c $< -o $@
 
 clean:
 	rm $(PROG) $(OBJECTS)
