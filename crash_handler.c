@@ -405,7 +405,7 @@ void dump_fault_addr(int pid, int sig)
     LOG("\n");
 }
 
-int dump_pc_code(int pid)
+void dump_pc_code(int pid)
 {
     struct pt_regs r;
     //pt_regs r;

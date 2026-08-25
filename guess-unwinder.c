@@ -92,7 +92,7 @@ int guess_unwind_backtrace_with_ptrace(int pid, mapinfo *milist,
 	/* move up stack looking at addresses */
 
 	/* set up regs for backtrace */
-	if (ptrace(PTRACE_GETREGS, pid, 0, &r)) return;
+	if (ptrace(PTRACE_GETREGS, pid, 0, &r)) return 0;
 	sp = r.ARM_sp;
 	pc = r.ARM_pc;
 	lr = r.ARM_lr;
